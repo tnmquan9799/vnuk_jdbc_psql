@@ -7,16 +7,8 @@ import java.sql.SQLException;
 public class ConnectionFactory {
 	public Connection getConnection() {
 		try {
-			/*
 			return DriverManager.getConnection(
 				"jdbc:postgresql://localhost/vnuk_personnel", 
-				"tnmquan9799", 
-				"Mquan123"
-			);
-			*/
-			
-			return DriverManager.getConnection(
-				"jdbc:postgresql://localhost/teacher_dev", 
 				System.getenv("db_user"), 
 				System.getenv("db_password")
 			);
